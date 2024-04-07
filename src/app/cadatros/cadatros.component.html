@@ -2,40 +2,51 @@
     <div class="text-center p-3">
         <h1>Cadastro de Produtos</h1>
     </div>
-    <form class="mx-5">
+    <form class="mx-5" [formGroup]="formGroupProduct">
         <div class="row g-2 p-1">
             <div class="col-md-6">
                 <label for="exampleFormControlInput1" class="form-label">Nome do produto :</label>
-                <input type="ID" class="form-control" />
+                <input type="ID" class="form-control" id="name" formControlName="name" />
             </div>
             <div class="col-md-3">
                 <label for="exampleFormControlInput1" class="form-label">ID do produto :</label>
-                <input type="number" class="form-control" />
+                <input type="number" class="form-control" id="id" formControlName="id" />
             </div>
         </div>
         <div class="mb-3 p-1">
             <label for="exampleFormControlTextarea1" class="form-label">Descrição do Produto :
             </label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="descricao" formControlName="description" rows="3"></textarea>
         </div>
         <div class="row g-2 p-1">
             <div class="col-md-6">
                 <label for="exampleFormControlInput1" class="form-label">Preço :</label>
-                <input type="number" class="form-control" />
+                <input type="number" class="form-control" id="price" formControlName="price" />
             </div>
             <div class="col-md-3">
                 <label for="exampleFormControlInput1" class="form-label">Quantidade :
                 </label>
-                <input type="number" class="form-control" />
+                <input type="number" class="form-control" formControlName="quantidade" id="quantidade" />
             </div>
         </div>
         <div class="col-md-4 g-2 p-2">
             <label for="exampleFormControlInput1" class="form-label">Responsável :
             </label>
-            <input type="password" class="form-control" />
+            <input type="password" class="form-control" id="Responsável" formControlName="responsable" />
         </div>
         <div class="vstack gap-2 col-md-2 p-4">
-            <button type="button" class="btn btn-primary">Cadastrar</button>
+            <button type="button" class="btn btn-primary" (click)="save()">Cadastrar</button>
         </div>
     </form>
+    <div class="card" *ngIf="products.length > 0">
+        <div class="card-body">
+            <h1> Lista de Produtos</h1>
+            <div *ngFor="let p of products">
+                <h5 class="card-title">{{p.name}} #{{ p.id }}</h5>
+                <p class="card-text">Descrição: {{ p.description }}</p>
+                <p class="card-text">Preço: {{ p.price }}</p>
+                <p class="card-text">Quantidade disponível: {{ p.quantidade }}</p>
+            </div>
+        </div>
+    </div>
 </div>

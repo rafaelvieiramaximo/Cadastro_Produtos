@@ -7,15 +7,15 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './cadatros.component.html',
   styleUrl: './cadatros.component.css'
 })
-export class CadatrosComponent implements OnInit {
+export class CadatrosComponent{
   
   products: Product [] = [];
 
-  formsGroupProduct : FormGroup | undefined;
+  formGroupProduct : FormGroup;
 
   constructor(private  formBuider : FormBuilder){
 
-    this.formsGroupProduct = formBuider.group({
+    this.formGroupProduct = formBuider.group({
     name : [''],
     id : [''],
     description : [''],
@@ -24,13 +24,9 @@ export class CadatrosComponent implements OnInit {
     responsable: ['']
     })
   }
-  
-  ngOnInit(): void {
-    this.loadProduct();
-  }
-  
-  loadProduct(){
-
+  save(){
+    this.products.push(this.formGroupProduct.value);
+    this.formGroupProduct.reset();
   }
     
 }
