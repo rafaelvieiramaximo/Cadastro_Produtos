@@ -1,3 +1,28 @@
 {
-  "product": []
+  "product": [
+    {
+      "name": "a",
+      "id": 1,
+      "description": "",
+      "price": "",
+      "quantidade": "",
+      "responsable": ""
+    },
+    {
+      "name": "asasa",
+      "id": 2,
+      "description": "",
+      "price": "",
+      "quantidade": "",
+      "responsable": ""
+    },
+    {
+      "name": null,
+      "id": 3,
+      "description": "Este código cria uma função chamada gerarTextoAleatorio que recebe um argumento tamanho, que representa o número de caracteres no texto aleatório a ser gerado. A função então itera sobre os caracteres disponíveis e seleciona aleatoriamente caracteres para construir o texto.",
+      "price": null,
+      "quantidade": null,
+      "responsable": null
+    }
+  ]
 }
