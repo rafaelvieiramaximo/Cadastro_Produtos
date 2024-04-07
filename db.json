@@ -1,12 +1,3 @@
 {
-    "product": [
-        {
-            "name" : "Caderno",
-            "id" : 1,
-            "description" : "Caderno azul",
-            "price" : 10.00,
-            "quantidade": 1,
-            "responsable": "Claudio"   
-        }
-    ]
+  "product": []
 }

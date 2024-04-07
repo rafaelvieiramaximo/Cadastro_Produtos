@@ -43,6 +43,7 @@ export class CadatrosComponent implements OnInit {
         next: () => {
           this.loadProduct();
           this.isEditing = false;
+          this.formGroupProduct.reset();
         }
       }
       )
@@ -55,6 +56,15 @@ export class CadatrosComponent implements OnInit {
     }
   }
 
-  
+  delete(product:Product){
+    this.service.delete(product).subscribe({
+      next: ()=> this.loadProduct()
+    })
+  }
+
+  edit(product:Product){
+    this.formGroupProduct.setValue(product);
+    this.isEditing = true;
+  }
 
 }
