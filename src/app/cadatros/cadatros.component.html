@@ -8,12 +8,24 @@
                 <label for="exampleFormControlInput1" class="form-label">Nome do produto :</label>
                 <input type="ID" class="form-control" id="name" formControlName="name" />
             </div>
+            <small class="text-danger" *ngIf="isError && name.hasError('required')">
+                *O nome é obrigatório
+            </small>
+            <small class="text-danger" *ngIf="isError && name.hasError('minlength')">
+                *O nome tem que no mínimo ter 4 characteres 
+            </small>
         </div>
         <div class="mb-3 p-1">
             <label for="exampleFormControlTextarea1" class="form-label">Descrição do Produto :
             </label>
             <textarea class="form-control" id="descricao" formControlName="description" rows="3"></textarea>
         </div>
+        <small class="text-danger" *ngIf="isError && description.hasError('minlength')">
+            *A descrição deve possuir no mínimo 10 characteres
+        </small>
+        <small class="text-danger" *ngIf="isError && description.hasError('required')">
+            *Esse campo é obrigatório
+        </small>
         <div class="row g-2 p-1">
             <div class="col-md-6">
                 <label for="exampleFormControlInput1" class="form-label">Preço :</label>
