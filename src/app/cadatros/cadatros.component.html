@@ -1,5 +1,5 @@
-<div class="container bg-primary-subtle my-5 rounded-2 p-3">
-    <div class="text-center p-3">
+<div class="container bg-primary-subtle my-2 rounded-2 p-5">
+    <div class="text-center">
         <h1>Cadastro de Produtos</h1>
     </div>
     <form class="mx-5" [formGroup]="formGroupProduct">
@@ -34,10 +34,10 @@
             <button type="button" class="btn btn-primary opacity-75" (click)="save()">Cadastrar</button>
         </div>
         <div class="card" *ngIf="products.length > 0">
-            <div class="card-body mb-5">
+            <div class="card-body mb-2">
                 <h1 class="text-center mt-3"> Lista de Produtos</h1>
                 <br>
-                <div *ngFor="let p of products" class="border border-primary p-3 my-4 mx-4 border-opacity-25 rounded-3 bg-info-subtle ">
+                <div *ngFor="let p of products" class="border border-primary p-3 my-1 mx-4 border-opacity-25 rounded-3 bg-info-subtle ">
                     <h5 class="card-title">{{p.name}} #{{ p.id }}</h5>
                     <p class="card-text">Descrição: {{ p.description }}</p>
                     <p class="card-text">Preço: {{ p.price }}</p>
