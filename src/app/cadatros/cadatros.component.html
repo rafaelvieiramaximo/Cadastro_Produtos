@@ -33,12 +33,11 @@
         <div class="vstack gap-2 col-md-2 py-4">
             <button type="button" class="btn btn-primary opacity-75" (click)="save()">Cadastrar</button>
         </div>
-
         <div class="card" *ngIf="products.length > 0">
             <div class="card-body mb-5">
-                <h1> Lista de Produtos</h1>
+                <h1 class="text-center mt-3"> Lista de Produtos</h1>
                 <br>
-                <div *ngFor="let p of products" class="border border-primary p-3 mt-2 mx-4 border-opacity-25" >
+                <div *ngFor="let p of products" class="border border-primary p-3 my-4 mx-4 border-opacity-25 rounded-3 bg-info-subtle ">
                     <h5 class="card-title">{{p.name}} #{{ p.id }}</h5>
                     <p class="card-text">Descrição: {{ p.description }}</p>
                     <p class="card-text">Preço: {{ p.price }}</p>
