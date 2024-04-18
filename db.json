@@ -7,6 +7,14 @@
       "price": 10,
       "quantidade": 11,
       "responsable": "adshflkjsadjfh"
+    },
+    {
+      "name": "Tarô",
+      "id": 2,
+      "description": "Cartas de aprendizado das trevas",
+      "price": 10,
+      "quantidade": 3,
+      "responsable": "rafaek"
     }
   ]
 }

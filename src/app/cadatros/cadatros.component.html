@@ -27,11 +27,11 @@
             *Esse campo é obrigatório
         </small>
         <div class="row g-2 p-1">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <label for="exampleFormControlInput1" class="form-label">Preço :</label>
                 <input type="number" class="form-control" id="price" formControlName="price" />
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 ms-4">
                 <label for="exampleFormControlInput1" class="form-label">Quantidade do Estoque:
                 </label>
                 <input type="number" class="form-control" formControlName="quantidade" id="quantidade" />
@@ -42,7 +42,7 @@
             </label>
             <input type="password" class="form-control" id="Responsável" formControlName="responsable" />
         </div>
-        <div class="vstack gap-2 col-md-2 py-4">
+        <div class="vstack gap-2 col-md-2 py-4 m-auto">
             <button type="button" class="btn btn-primary opacity-75" (click)="save()">Cadastrar</button>
         </div>
         <div class="card" *ngIf="products.length > 0">
