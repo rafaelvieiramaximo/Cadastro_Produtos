@@ -48,12 +48,19 @@ public class ProductController {
     @GetMapping ("products/{id}")
     public ResponseEntity<Product> getProduct(@PathVariable int id){
 
-        if (id <= products.size()) {
-            return ResponseEntity.ok(products.get(id-1));
+        // if (id <= products.size()) {
+        //     return ResponseEntity.ok(products.get(id-1));
 
-        }else{
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Product not Found in BD");
-        }
+        // }else{
+        //     throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Product not Found in BD");
+        // }
+
+        Product prod = products.stream()
+                                .filter(p -> p.getId() == id)  
+                                .findFirst()
+                                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Product not Found in BD"));
+
+        return ResponseEntity.ok(prod);
     }
     
     @GetMapping ("products")

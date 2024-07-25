@@ -2,6 +2,7 @@ package com.product.product_backend.models;
 
 public class Product {
    
+    //Atributos de product
     private int id;
     private String name;
     private String description;
@@ -9,6 +10,12 @@ public class Product {
     private Number quantidade;
     private String responsable;
 
+    //Método Construtores
+    public Product(){
+        System.out.println("Construindo um produto");
+    }
+
+    //Métodos de product
     public String getName() {
         return name;
     }
