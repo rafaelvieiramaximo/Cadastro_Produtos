@@ -11,8 +11,13 @@ public class Product {
     private String responsable;
 
     //Método Construtores
-    public Product(){
-        System.out.println("Construindo um produto");
+    public Product(int id, String name, String description, double price, Number quantidade, String responsable){
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.quantidade = quantidade;
+        this.responsable = responsable;
     }
 
     //Métodos de product

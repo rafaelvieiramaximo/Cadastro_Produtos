@@ -22,23 +22,23 @@ public class ProductController {
     @PostConstruct
     public void init(){
 
-        Product p1 = new Product();
+        Product p1 = new Product(1, "Coca cola", "Geladinha", 10.50, 1, "Marquinhos");
 
-        p1.setId(1);
-        p1.setName("Coca cola");
-        p1.setPrice(10.50);
-        p1.setQuantidade(1);
-        p1.setDescription("Geladinha");
-        p1.setResponsable("Marquinhos");
+        // p1.setId(1);
+        // p1.setName("Coca cola");
+        // p1.setPrice(10.50);
+        // p1.setQuantidade(1);
+        // p1.setDescription("Geladinha");
+        // p1.setResponsable("Marquinhos");
 
-        Product p2 = new Product();
+        Product p2 = new Product(2,  "Pepsi", "Geladinha", 6.50, 1, "Carlinhos");
 
-        p2.setId(2);
-        p2.setName("Pepsi");
-        p2.setPrice(6.50);
-        p2.setQuantidade(1);
-        p2.setDescription("Geladinha");
-        p2.setResponsable("Carlinhos");
+        // p2.setId(2);
+        // p2.setName("Pepsi");
+        // p2.setPrice(6.50);
+        // p2.setQuantidade(1);
+        // p2.setDescription("Geladinha");
+        // p2.setResponsable("Carlinhos");
 
         products.add(p1);
         products.add(p2);
